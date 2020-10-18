@@ -1,18 +1,18 @@
 // Write code under this line
 class Storage {
+  items = [];
   constructor(items) {
     this.items = items;
   }
-
   getItems() {
     return this.items;
   }
   addItem(item) {
-    this.items += `,${item}`;
+    this.items.push(item);
   }
   removeItem(item) {
-    this.inx = this.items.indexOf(item);
-    console.log(this.inx);
+    let inx = this.items.indexOf(item);
+    if (inx == true) this.items.splice(inx, 1);
   }
 }
 console.log(typeof Storage);
